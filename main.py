@@ -21,7 +21,7 @@ elif ch == 'upload':
 
 else:
     url = st.sidebar.text_input("Enter remote url:")
-    button = st.sidebar.button("Summary", args=(url,))
+    button = st.sidebar.button("Summary", on_click=save_transcript, args=(url,))
 
 def get_clean_time(start_ms):
     seconds = int((start_ms / 1000) % 60)
